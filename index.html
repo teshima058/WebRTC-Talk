@@ -15,7 +15,7 @@
   </div>
   
   <!---- socket ※自分のシグナリングサーバーに合わせて変更してください------>
-  <script src="http://teshima.058/github.io/WebRTC-Talk/socket.io/socket.io.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
   
   <script>
   var localVideo = document.getElementById('local-video');
@@ -122,7 +122,7 @@
   // create socket
   var socketReady = false;
   var port = 8080;
-  var socket = io.connect('http://127.0.0.1:' + port + '/'); // ※自分のシグナリングサーバーに合わせて変更してください
+  var socket = io.connect('http://teshima.058/github.io/WebRTC-Talk/'); // ※自分のシグナリングサーバーに合わせて変更してください
 
   // socket: channel connected
   socket.on('connect', onOpened)
