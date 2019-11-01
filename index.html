@@ -6,7 +6,7 @@
 </head>
 <body>
   Signaling Server URL:
-  <input id=serverURL type="text" size="32" value=""><br>
+  <input id=serverURL type="text" size="32" value="http:127.0.0.1:8080/"><br>
   <button type="button" onclick="startVideo();">Start video</button>
   <button type="button" onclick="stopVideo();">Stop video</button>
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -20,7 +20,7 @@
   <!-- <script src="document.getElementById('serverURL').value + '/socket.io/socket.io.js'"></script> -->
   <script>
     var script = document.createElement('script');
-    script.src = document.getElementById('serverURL').value + '/socket.io/socket.io.js'; //ファイルパス
+    script.src = document.getElementById('serverURL').value + 'socket.io/socket.io.js'; //ファイルパス
     document.body.appendChild(script);
   </script>
   <script>
