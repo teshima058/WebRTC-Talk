@@ -16,7 +16,7 @@
    <video id="local-video" autoplay style="width: 240px; height: 180px; border: 1px solid black;"></video>
   </div>
   
-  <!---- socket ※自分のシグナリングサーバーに合わせて変更してください------>
+  <!-- socket ※自分のシグナリングサーバーに合わせて変更してください-->
   <!-- <script src="document.getElementById('serverURL').value + '/socket.io/socket.io.js'"></script> -->
   <script>
     var script = document.createElement('script');
@@ -128,8 +128,7 @@
   // create socket
   var socketReady = false;
   var port = 8080;
-  var socket = io.connect('http://127.0.0.1:' + port + '/'); // ※自分のシグナリングサーバーに合わせて変更してください
-
+  var socket = io.connect(document.getElementById('serverURL').value); // ※自分のシグナリングサーバーに合わせて変更してください
   // socket: channel connected
   socket.on('connect', onOpened)
         .on('message', onMessage)
