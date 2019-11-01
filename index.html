@@ -5,6 +5,8 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 </head>
 <body>
+  Signaling Server URL:
+  <input id=serverURL type="text" size="32" value=""><br>
   <button type="button" onclick="startVideo();">Start video</button>
   <button type="button" onclick="stopVideo();">Stop video</button>
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -15,7 +17,9 @@
   </div>
   
   <!---- socket ※自分のシグナリングサーバーに合わせて変更してください------>
-  <script src="https://5474bef0.ngrok.io/socket.io/socket.io.js"></script>
+  <script>
+    src=document.getElementById('serverURL').value + " /socket.io/socket.io.js">
+  </script> 
   
   <script>
   var localVideo = document.getElementById('local-video');
